@@ -19,9 +19,15 @@
         <header id="header" class="section-1">Guess The Number</header>
         <p id="p" class="section-1 show">Guess the secret number between 0 - 100</p>
       <!-- user will input number guess here/ input box will dynamically be shown after start button is clicked-->
-        <section id="section-number-input" class="game section-2 hide" ></section>
+        <section id="section-number-input" class="game section-2 hide" >
+          <!-- Number Input info -->
+          <label for="number-input">Enter a number: </label>
+          <input type="text" id="section-number-input" class="game-section numInput">
+          <!-- number input submission button -->
+          <button id="numBtn" class="btn section-2" name="guess" type="submit" value="">Submit Number</button>
+        </section>
         <!-- secret Number will be revealed here -->
-        <section id="section-secret-number" class="game section-3 show"></section>
+        <section id="section-secret-number-box" class="game section-3 show"></section>
         <!--  number previously guessed box will dynamically be shown after start button is clicked -->
         <section id="section-number-guessed-log" class="game section-4 hide"></section>
         <!-- start and reset button will show up here -->

@@ -1,3 +1,4 @@
+/*VARIABLES*/
 const game = {
   title: "Guess the Number!",
   biggestNum: 100,
@@ -9,25 +10,39 @@ const game = {
       this.smallestNum;
   },
 };
-//Assign the secret number before prompt
+
+//Call game play function to generate secret number here
 game.play();
+//This is the secret number
 console.log(game.secretNum);
 
-// prompt to enter their guess
-/* ### variables to create
-- guess, guessArray, guess is updated to result of prompt; prevGuess is guessArray[guessArray.length - 1] , numGuesses = guessArray.length, guessString, and the following 
-### alert template literals
-- tooLowAlert = `${prevGuess} is too low. you've guessed ${guessString}.`
-- tooHighAlert = `${prevGuess} is too high. you've guessed ${guessString}.`
-- winAlert = `Yes, ${prevGuess} was the secret number. You took ${numGuesses} guesses.`
-### functions/methods to create
--while loop, prompt, if/else statment comparing guess to secret number */
+/* SELECTORS */
+/* header;
+p;
+numInput;
+secretNumBox;
+numGuessLog;
+numBtn;//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
+startBtn;
+resetBtn; */
 
-let guess; //guess is updated to result of prompt
-let prevGuess; 
-const guessArray = []; //push all prevGuesses to the array but only prevGuesses[array.length] = guess
+/* Event Listeners */
+//numBtn;//click
+//startBtn;//click
+//resetBtn;//click
+
+/* Functions to be called */
+/* const toggle;//toggle class from who to hide-use query selector
+const startGame;//entire game function lives under this function??
+const endGame;//reveals secretNumberandreveals reset btn
+const reset;//resets all game html to OG settings */
+
+
+let guess; //guess is updated to result of html form input
+let prevGuess; //updated from guess input
+const guessArray = []; //push all prevGuesses to the guessArray
 let guessString = guessArray.join(", ")
-
+/* 
 while (guess !== game.secretNum) {
   guess = prompt(
     "Enter a number between 0 and 100 to guess the secret number!"
@@ -52,3 +67,4 @@ while (guess !== game.secretNum) {
     alert(`Yes! ${guess} was the secret number! You took ${guessArray.length} guesses. Press ok to end this game and start a new game.`);
   }
 }
+ */
