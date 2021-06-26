@@ -1,7 +1,16 @@
 # guess-the-number-lab
 ## Pseudocode Starts here
 
-# *leave dynamically changing html and creating CSS until game functionality is finalized*
+## Features from lab instructions -complete these before doing anything after the star line
+- Allow the player to continually be prompted to enter their guess of what the secret number is until they guess correctly.
+- If the player has an incorrect guess, display an alert message that informs the player:
+    - Whether their guess is too high, or too low, and…
+    - A list of all the previously guessed numbers (without showing the square brackets of an array).
+- If the player has guessed the secret number:
+    - Display an alert message that congratulates the player and informs them of how many guesses they took.
+    - End the gameplay.
+
+# *********************************************************************************
 
 #### build html boilerplate-DONE
 #### html boilerplate will note what will be automatically shown vs what will be dynamically added after start 
@@ -27,7 +36,10 @@
 #### create a start button 
 #### the start button contains all functions of the game
 #### the game.play() function defines the secret number before the player inputs a number at start of the game
-#### 
+
+
+
+
 #### write code that will allow the user to input a number
 #### write a function/if statement that number is compared to secret num and returns a dynamically generated ${prevGuess} is too low/high or you guessed the secret number
 #### write a function that updates the previous guess on the next try while also logs the previously guess number in the guessed number log div
