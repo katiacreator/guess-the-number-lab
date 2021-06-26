@@ -24,9 +24,9 @@ console.log(game.secretNum);
 -while loop, prompt, if/else statment comparing guess to secret number */
 
 let guess; //guess is updated to result of prompt
-let prevGuess; // guessArray[guessArray.length - 1]
+let prevGuess; 
 const guessArray = []; //push all prevGuesses to the array but only prevGuesses[array.length] = guess
-let guessString; //guessArray.join(",")
+let guessString = guessArray.join(", ")
 
 while (guess !== game.secretNum) {
   guess = prompt(
@@ -37,20 +37,18 @@ while (guess !== game.secretNum) {
     guessArray.push(prevGuess);
     console.log(`${prevGuess}`);
     console.log(guessArray);
-    alert(`${guess} is too low. you've guessed ${guessArray}.`);
+    alert(`${guess} is too low. you've guessed ${guessString}.`);
   } else if (guess > game.secretNum) {
     prevGuess = guess;
     guessArray.push(prevGuess);
     console.log(`${prevGuess}`);
     console.log(guessArray);
-    alert(`${guess} is too high. you've guessed ${guessArray.join(", ")}.`);
-  } else if (guess === game.secretNum) {
+    alert(`${guess} is too high. you've guessed ${guessString}.`);
+  } else {
     prevGuess = guess;
     guessArray.push(prevGuess);
-    console.log(`${prevGuess}`);
+    console.log(`${prevGuess}`); 
     console.log(guessArray);
-    alert(`Yes! ${guess} was the secret number! You took ${guessArray.length} guesses.`);
-  } else {
-    alert("Game over")
+    alert(`Yes! ${guess} was the secret number! You took ${guessArray.length} guesses. Press ok to end this game and start a new game.`);
   }
 }
