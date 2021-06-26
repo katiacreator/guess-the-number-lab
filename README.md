@@ -9,6 +9,14 @@
 - If the player has guessed the secret number:
     - Display an alert message that congratulates the player and informs them of how many guesses they took.
     - End the gameplay.
+### variables to create
+- guess, guessArray, guess is updated to result of prompt; prevGuess is guessArray[guessArray.length - 1] , numGuesses = guessArray.length, guessString, and the following 
+### alert template literals
+- tooLowAlert = `${prevGuess} is too low. you've guessed ${guessString}.`
+- tooHighAlert = `${prevGuess} is too high. you've guessed ${guessString}.`
+- winAlert = `Yes, ${prevGuess} was the secret number. You took ${numGuesses} guesses.`
+### functions/methods to create
+-while loop, prompt, if/else statment comparing guess to secret number
 
 # *********************************************************************************
 
