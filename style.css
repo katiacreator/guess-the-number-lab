@@ -1,6 +1,63 @@
 body {
-  background-color: darkblue;
+  background-color: rgb(46, 47, 48);
   color: aliceblue;
   font-size: 2em;
   text-align: center;
+  padding: 10px 10px;
 }
+
+#flex-container {
+  border: deeppink solid 2px;
+  padding: 20px;
+}
+
+#header {
+  border: blue solid 2px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.p {
+  border: red solid 2px;
+  margin: 50px;
+}
+#section-number-input {
+  border: lime solid 2px;
+  padding: 20px;
+  margin: 50px;
+  flex-wrap: wrap;
+}
+#numBtn {
+  border: deeppink solid 2px;
+  padding: 20px;
+}
+#section-secret-number-box {
+  border: orange solid 2px;
+  padding: 20px;
+  margin: 50px;
+}
+#section-number-guessed-log {
+  border: yellow solid 2px;
+  padding: 20px;
+  margin: 50px;
+}
+
+#startBtn{
+  border: rgb(247, 0, 255) solid 2px;
+  padding: 20px;
+  margin: auto 50px;
+}
+
+#resetBtn {
+  border: yellow solid 2px;
+  padding: 20px;
+  margin: 50px;
+}
+.btn {
+  border: white solid 2px;
+  padding: 20px;
+}
+
+
+
+
