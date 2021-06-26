@@ -1,6 +1,6 @@
 const game = {
   title: "Guess the Number!",
-  biggestNum: 5,
+  biggestNum: 100,
   smallestNum: 1,
   secretNum: null,
   play: function () {
@@ -30,22 +30,27 @@ let guessString; //guessArray.join(",")
 
 while (guess !== game.secretNum) {
   guess = prompt(
-    "Enter a number between 0 and 5 to guess the secret number!"
+    "Enter a number between 0 and 100 to guess the secret number!"
   );
   if (guess < game.secretNum) {
-    console.log(`${guess}`);
-    prevGuess = guess
-    alert(`${guess} is too low. you've guessed ${prevGuess}.`);
+    prevGuess = guess;
+    guessArray.push(prevGuess);
+    console.log(`${prevGuess}`);
+    console.log(guessArray);
+    alert(`${guess} is too low. you've guessed ${guessArray}.`);
   } else if (guess > game.secretNum) {
-    console.log(`${guess}`);
-    prevGuess = guess
-    alert(`${guess} is too high. you've guessed ${prevGuess}.`);
+    prevGuess = guess;
+    guessArray.push(prevGuess);
+    console.log(`${prevGuess}`);
+    console.log(guessArray);
+    alert(`${guess} is too high. you've guessed ${guessArray.join(", ")}.`);
+  } else if (guess === game.secretNum) {
+    prevGuess = guess;
+    guessArray.push(prevGuess);
+    console.log(`${prevGuess}`);
+    console.log(guessArray);
+    alert(`Yes! ${guess} was the secret number! You took ${guessArray.length} guesses.`);
   } else {
-    console.log(`${guess}`);
-    prevGuess = guess
-    alert(
-      `Yes! ${guess} was the secret number! You took some guesses.`
-    );
-    break
+    alert("Game over")
   }
 }
