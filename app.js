@@ -34,17 +34,18 @@ while (guess !== game.secretNum) {
   );
   if (guess < game.secretNum) {
     console.log(`${guess}`);
-    // prevGuess = guess
-    alert(`${guess} is too low. you've guessed ${guessString}.`);
+    prevGuess = guess
+    alert(`${guess} is too low. you've guessed ${prevGuess}.`);
   } else if (guess > game.secretNum) {
     console.log(`${guess}`);
-    //prevGuess = guess
-    alert(`${guess} is too high. you've guessed ${guessString}.`);
+    prevGuess = guess
+    alert(`${guess} is too high. you've guessed ${prevGuess}.`);
   } else {
     console.log(`${guess}`);
-    //prevGuess = guess
+    prevGuess = guess
     alert(
       `Yes! ${guess} was the secret number! You took some guesses.`
     );
+    break
   }
 }
