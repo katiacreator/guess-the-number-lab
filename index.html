@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS for the entire game -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- appjs is for primary game code -->
     <script defer src="app.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <!-- resetjs is for js to restart the game if i have time -->
+    <script defer src="reset.js"></script>
+    <title>Guess The Number</title>
+  </head>
+  <body>
+    <!-- Entire HTML will live in this flexbox container ( all will be dynamically added) -->
+    <main id="main-game-section">
+        <!-- Header Div box-1 -->
+        <header id="header" class="section-1">Guess The Number</header>
+        <p id="p" class="section-1 show">Guess the secret number between 0 - 100</p>
+      <!-- user will input number guess here/ input box will dynamically be shown after start button is clicked-->
+        <section id="section-number-input" class="game section-2 hide" ></section>
+        <!-- secret Number will be revealed here -->
+        <section id="section-secret-number" class="game section-3 show"></section>
+        <!--  number previously guessed box will dynamically be shown after start button is clicked -->
+        <section id="section-number-guessed-log" class="game section-4 hide"></section>
+        <!-- start and reset button will show up here -->
+        <section id="startBtn" class="btn section-5 show">START</section>
+        <!-- reset button will dynamically be shown after game ends -->
+        <section id="resetBtn" class="btn section-5 hide">RESET</section>
+    </main>
+  </body>
 </html>
