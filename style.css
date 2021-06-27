@@ -6,11 +6,10 @@ body {
   padding: 10px 10px;
   font-family: "Rubik", sans-serif;
   font-size: 20px;
-  width: 900px;
 }
 /*Flex Container*/
 #flex-container {
-  border: deeppink solid 2px;
+  border: turquoise solid 1px;
   margin: 0 auto;
 }
 
@@ -26,7 +25,7 @@ body {
   font-family: "Teko", sans-serif;
   font-size: 2em;
   /* border: blue solid 2px; */
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 #header h1 {
@@ -42,7 +41,7 @@ body {
 /**Game Section**/
 #section-number-guess {
   font-size: 1.5em;
-  border: lime solid 2px;
+  /* border: lime solid 2px; */
   margin-top: 20px;
   padding: 20px;
 }
@@ -60,17 +59,17 @@ body {
 #section-secret-number-box {
   font-family: "Teko", sans-serif;
   font-size: 8em;
-  text-align:center;
-  border: turquoise solid 2px;
+  border: turquoise solid 1px;
   margin-top: 20px;
   width: 100px;
-  padding: 20px 40px;
+  padding: 30px 80px;
 }
+
 
 #section-guess-array {
   font-family: "Rubik", sans-serif;
   font-size: 1.5em;
-  border: lightskyblue solid 4px;
+  /* border: lightskyblue solid 4px; */
   padding: 20px;
   margin-top: 20px;
 }
@@ -80,7 +79,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 0.5em;
   color: black;
-  border: deeppink solid 2px;
+  border: none;
   background-color: turquoise;
   border-radius: 45px;
 }
