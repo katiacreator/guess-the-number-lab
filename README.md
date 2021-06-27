@@ -31,19 +31,20 @@
 
 # *********************************************************************************
 ## HTML to-dos not dynamic on js file
-#### write a p tag for instructions on how game is played
-##### - add a css class that shows/hide this
+#### write a header h1 tag with the title of the game-DONE
+#### write a p tag for instructions on how game is played-DONE
+##### - add a css class that shows/hide this-DONE
 ##### - add a toggle function that shows/hides the p tag on start or reset
-#### write a numInput tag for user to input a number guess
+#### write a numInput tag for user to input a number guess-DONE
 ##### - add a toggle function that shows/hides this on start or reset
 ##### - write code that dynamically grabs the info from the numInput tag
-#### write a secretNumBox tag for where the secret number will be revealed
-##### - add a css class that shows/hide this
+#### write a secretNumBox tag for where the secret number will be revealed-DONE
+##### - add a css class that shows/hide this-DONE
 ##### - add a toggle function that shows/hides the secretNum on start, end, or reset
-#### write a numGuessLog tag for where the previous guesses are displayed dynamically after put into guessArray and turned into  string
+#### write a numGuessLog tag for where the previous guesses are displayed dynamically after put into guessArray and turned into  string-DONE
 ##### - write a function that pushes guess into guessArray to make the string for this
 ##### - add a toggle function that shows/hides this on start or reset
-#### write a submitBtn tag for the user to submit the number input in the number input section
+#### write a submitBtn tag for the user to submit the number input in the number input section-DONE
 #### write a startBtn tag that will start the entire game, dynamically add all the game div and remove the start button/remove the p tag
 #### write a resetBtn tag to appear at the end of the game which will reset the og html that is displayed before the game starts
 #### create a toggle function to go along with the startBtn, resetBtn, and numberBtn??? if needed

@@ -6,8 +6,7 @@ body {
   padding: 10px 10px;
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
-  
-  
+  width: 900px;  
 }
 /*Flex Container*/
 #flex-container {
@@ -105,11 +104,11 @@ margin-top: -80px;
 
 /**Visibility**/
 .show{
-visibility: 1;
+display: block;
 }
 
-.hide{
-visibility: 0;
-}
+/* .hide{
+display: none;
+} */
 
 
