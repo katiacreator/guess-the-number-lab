@@ -22,7 +22,7 @@ p;
 numInput;
 secretNumBox;
 numGuessLog;
-numBtn;//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
+submitBtn;//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
 startBtn;
 resetBtn; */
 
@@ -32,7 +32,9 @@ resetBtn; */
 //resetBtn;//click
 
 /* Functions to be called */
-/* const toggle;//toggle class from who to hide-use query selector
+/* 
+const checkInput;//function that pulls value from input
+const toggle;//toggle class from who to hide-use query selector
 const startGame;//entire game function lives under this function??
 const endGame;//reveals secretNumberandreveals reset btn
 const reset;//resets all game html to OG settings */

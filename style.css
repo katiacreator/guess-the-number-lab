@@ -26,12 +26,16 @@ body {
   font-family: 'Teko', sans-serif;
   font-size: 2em;
   border: blue solid 2px;
+  margin-top: 70px;
+}
+
+#header h1{
+  margin-top: -80px;
 }
 
 #p {
   /* font-family: 'Times', sans-serif; */
   font-size: .7em;
-  border: red solid 2px;
 margin-top: -80px;
 }
 
@@ -49,7 +53,8 @@ margin-top: -80px;
   border: rgb(212, 140, 212) solid 5px;
   margin: 10px;
   padding: 20px;
-  width: 20px;
+  width: 40px;
+  text-align: center;
 }
 
 #section-secret-number {
@@ -90,6 +95,7 @@ margin-top: -80px;
   margin-top: 20px;
   padding: 20px;
 }
+
 #startBtn, #resetBtn{
   font-size: 2em;
   font-weight: bold;
