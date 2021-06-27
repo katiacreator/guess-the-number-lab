@@ -57,7 +57,7 @@ game.secretNumBox = document.getElementById(
   "section-secret-number-box"
 );
 //console.log((game.secretNumBox));
-game.secretNumBox.textContent = game.secretNum
+game.secretNumBox.textContent = "?"
 console.log(game.secretNumBox)
 
 //to display guesses
@@ -91,7 +91,7 @@ startBtn.addEventListener("click", function () {
 //To submit guess to check Input function
 submitBtn.addEventListener("click", function () {
   game.guess = game.numInput.value
-console.log(game.guess)
+  console.log(game.guess)
 });
 
 //To reset game
@@ -116,8 +116,10 @@ game.toggle = function (element) {
 };
 
 game.gameOver = function (){
-//reveal secretnumber
-// reveal reset button
+  //reveal secretnumber
+  game.secretNumBox.textContent = game.secretNum
+  console.log(game.secretNumBox)
+  // reveal reset button
   game.toggle(resetBtn);
   //change guess log text
   game.guessLogText = `Yes, ${game.guess} was the secret number. You took ${game.guessArray.length} guesses. Press reset button to start a new game`;
