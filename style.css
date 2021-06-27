@@ -4,9 +4,9 @@ body {
   font-size: 1em;
   text-align: center;
   padding: 10px 10px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 20px;
-  width: 900px;  
+  width: 900px;
 }
 /*Flex Container*/
 #flex-container {
@@ -15,29 +15,29 @@ body {
 }
 
 /**Sections**/
-.header-section, .game-section, 
-.start-end-section{
+.header-section,
+.game-section,
+.start-end-section {
   margin: 0 auto;
 }
 
 /**Header Section**/
 #header {
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 2em;
-  border: blue solid 2px;
+  /* border: blue solid 2px; */
   margin-top: 70px;
 }
 
-#header h1{
+#header h1 {
   margin-top: -80px;
 }
 
 #p {
   /* font-family: 'Times', sans-serif; */
-  font-size: .7em;
-margin-top: -80px;
+  font-size: 0.7em;
+  margin-top: -80px;
 }
-
 
 /**Game Section**/
 #section-number-guess {
@@ -49,7 +49,7 @@ margin-top: -80px;
 
 #section-number-input {
   font-size: 1em;
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(255, 255, 255);
   border-bottom: turquoise solid 5px;
   margin: 10px;
   padding: 20px;
@@ -58,8 +58,9 @@ margin-top: -80px;
 }
 
 #section-secret-number-box {
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 8em;
+  text-align:center;
   border: turquoise solid 2px;
   margin-top: 20px;
   width: 100px;
@@ -67,7 +68,7 @@ margin-top: -80px;
 }
 
 #section-guess-array {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 1.5em;
   border: lightskyblue solid 4px;
   padding: 20px;
@@ -76,13 +77,12 @@ margin-top: -80px;
 
 /**Buttons**/
 .btn {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: .5em;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.5em;
   color: black;
   border: deeppink solid 2px;
   background-color: turquoise;
   border-radius: 45px;
-  
 }
 
 #submitBtn {
@@ -90,13 +90,14 @@ margin-top: -80px;
 }
 
 /**Start-End Section**/
-#section-start-end{
-  border: magenta 2px solid;
+#section-start-end {
+  /* border: magenta 2px solid; */
   margin-top: 20px;
   padding: 20px;
 }
 
-#startBtn, #resetBtn{
+#startBtn,
+#resetBtn {
   font-size: 2em;
   font-weight: bold;
   padding: 20px;
@@ -107,8 +108,6 @@ margin-top: -80px;
 
 } */
 
-.hide{
-display: none;
+.hide {
+  display: none;
 }
-
-

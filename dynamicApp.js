@@ -10,21 +10,17 @@ const game = {
       this.smallestNum;
   },
 };
+
 game.instructions = "Pick a number between 0-100 to reveal the secret number!";
 //console.log(game.instructions)
 game.guess; //guess is updated to result of html form input
 //console.log(game.guess)
-game.prevGuess; //updated from guess input
-//console.log(game.prevGuess)
-game.guessArray = [1, 3, 87]; //push all prevGuesses to the guessArray
+game.prevGuess;
+game.guessArray = []; //push all prevGuesses to the guessArray
 //console.log(game.guessArray)
 game.guessString = game.guessArray.join(", ");
 //console.log(game.guessString)
 
-//Call game play function to generate secret number here
-game.play();
-//This is the secret number
-//console.log(game.secretNum);
 
 /* SELECTORS */
 // const header = document.getElementById("header");
@@ -32,11 +28,11 @@ game.play();
 /* TOGGLE SELECTORS */
 // P tag to show/hide instructions for the game
 game.instructions = document.getElementById("p").textContent =
-  "Pick a number between 0 - 100 to reveal the secret number!";
+"Pick a number between 0 - 100 to reveal the secret number!";
 //console.log(game.instructions);
 // to show/hide game section
 game.section = document.querySelectorAll(".game-section");
-console.log(game.section)
+
 //when number is submitted in input and button is clicked number will show in the prevlog box after it is add to guessArray
 game.submitBtn = document.getElementById("submitBtn");
 //console.log(game.submitBtn)
@@ -49,49 +45,86 @@ game.resetBtn = document.getElementById("resetBtn");
 game.p = document.getElementById("p");
 // to select the number guess
 game.numInput = document.getElementById("section-number-input");
-
 console.log(`Bug, value is: ${game.numInput.value}`);//BUG FIXED!!!!
 
 // to SELECT secret number Div to append secret num
-game.secretNumBox = document.getElementById(
-  "section-secret-number-box"
-);
-//console.log((game.secretNumBox));
-game.secretNumBox.textContent = "?"
-console.log(game.secretNumBox)
+game.secretNumBox = document.getElementById("section-secret-number-box");
+game.secretNumBox.textContent;
 
 //to display guesses
 game.guessLog = document.getElementById("section-guess-log");
-game.guessLogText = `You've entered ${game.guessString}`;
-console.log(game.guessLogText);
-game.guessLog.textContent = game.guessLogText
+// console.log(game.guessLogText);
 
+//to display buttons
 game.startEnd = document.getElementById("section-start-end");
 
+/** FUNCTIONS to be called **/
+//const toggle;//toggle class from who to hide-use query selector
+game.toggle = function (element) {
+    element.classList.toggle("hide");
+};
 
-// console.log(game)
-//test push
-game.guessArray.push(game.numInputVal);//This is a bug until i fix input value bug
-// game.numInputVal = game.guessArray[3]
-game.guess = game.numInputVal;
-// console.log(game.guessArray);
+game.gameOver = function (){
+  //reveal secretnumber
+  game.secretNumBox.textContent = game.secretNum
+  //change guess log text
+  game.guessLogText = `Yes, ${game.guess} was the secret number! You took ${game.guessArray.length} guess(es). Press reset button to start a new game`;
+  game.guessLog.textContent = game.guessLogText
+  // reveal reset button
+  game.toggle(game.resetBtn);
+};
+
+//Call game play function to generate secret number here
+game.play();
+//This is the secret number
+console.log(game.secretNum);
+
+game.checkInput = function (){
+  while (game.guess !== game.secretNum) {
+    game.guess = parseInt(game.numInput.value)
+    if (game.guess < game.secretNum) {
+      game.prevGuess = game.guess;
+      game.guessArray.push(game.prevGuess);
+      // console.log(`${game.prevGuess}`);
+      // console.log(game.guessArray);
+      game.guessLog.textContent = `${game.prevGuess} is too low. You've guessed ${game.guessString} so far.`;
+    } else if (game.guess > game.secretNum) {
+      game.prevGuess = game.guess;
+      game.guessArray.push(game.prevGuess);
+      // console.log(`${game.prevGuess}`);
+      // console.log(game.guessArray);
+      game.guessLog.textContent = `${game.prevGuess} is too high. You've guessed ${game.guessString} so far.`;
+    } else {
+      game.prevGuess = game.guess;
+      game.guessArray.push(game.prevGuess);
+      // console.log(`${game.prevGuess}`); 
+      // console.log(game.guessArray);
+      game.gameOver()
+    }
+  }
+}
+
+game.startGame = function (){
+  game.toggle(game.p);
+  game.secretNumBox.textContent = "?";
+  game.guessLogText = " ";
+  game.section.forEach(section => { 
+    game.toggle(section)
+  });
+  game.startEnd.remove(game.startBtn)
+}
+
 
 
 /* Event Listeners */
 //To start the game
 startBtn.addEventListener("click", function () {
-  game.toggle(game.p);
-  game.secretNumBox.textContent = "?";
-  game.section.forEach(section => { 
-    game.toggle(section)
-  });
-  game.startEnd.remove(startBtn)
+  game.startGame()
 });
 
 //To submit guess to check Input function
 submitBtn.addEventListener("click", function () {
-  game.guess = game.numInput.value
-  console.log(game.guess)
+  game.checkInput();
 });
 
 //To reset game
@@ -102,83 +135,6 @@ resetBtn.addEventListener("click", function () {
   game.section.forEach(section => { 
     game.toggle(section)
   });
-  game.startEnd.remove(resetBtn)
+  game.startEnd.remove(game.resetBtn)
 });
 
-/** FUNCTIONS to be called **/
-//const toggle;//toggle class from who to hide-use query selector
-game.toggle = function (element) {
-  if(element.classList === "hide"){
-    element.classList.toggle("hide");
-  } else {
-    element.classList.toggle("hide");
-  }
-};
-
-game.gameOver = function (){
-  //reveal secretnumber
-  game.secretNumBox.textContent = game.secretNum
-  console.log(game.secretNumBox)
-  // reveal reset button
-  game.toggle(resetBtn);
-  //change guess log text
-  game.guessLogText = `Yes, ${game.guess} was the secret number. You took ${game.guessArray.length} guesses. Press reset button to start a new game`;
-  game.guessLog.textContent = game.guessLogText
-};
-
-//const checkInput;//function that pulls value from input
-
-
-//entire game function lives under this function??
-//<!-- game.startGame = function(){
-  //guess = prompt will become checkInput function
-  //change guess to game.guess
-  //Step 1 -call game.play to generate the secret number
-  // call game.play();
-//Step 2 - call toggle function to show game section and remove startBtn and p tag
-
-
-// } -->
-// <!-- toggle (element) => (element.classList === "show") ? element.classList === "hide" : x.classList = "show"; -->
-
-//Step 3 - create a while loop to call checkInput to get the value of numInput as game.guess
-//checkInput(){
-    //grab the input value update it as game.guess
-          //compare game.guess to game.secretNum
-          // push game.guess to game.guessArray
-          // dynamically show text of section-guess-array p tag = `You've entered ${guessString}`
-          // on else gamewin run function toggle to show the secret num in secretNumBox(secretNumBox.textContent = `${game.secreetNum}`) and shows total number of guesses in guess log as section-guess-array p tag = `Yes! ${game.guess} was the secret number! You took ${guessArray.length} guesses. Press reset to end this game and start a new game.`
-          //call function gameOver 
-          //gameOver(){
-              //step 1 toggle shows resetBtn
-              //when resetBtn click handler runs toggle function that resets the og html settings so you can restart the game
-          //}
-
-// }; -->
-
-//game.startGame ()
-
-/* while (guess !== game.secretNum) {
-  guess = prompt(
-    "Enter a number between 0 and 100 to guess the secret number!"
-  );
-  if (guess < game.secretNum) {
-    prevGuess = guess;
-    guessArray.push(prevGuess);
-    console.log(`${prevGuess}`);
-    console.log(guessArray);
-    alert(`${guess} is too low. you've guessed ${guessString}.`);
-  } else if (guess > game.secretNum) {
-    prevGuess = guess;
-    guessArray.push(prevGuess);
-    console.log(`${prevGuess}`);
-    console.log(guessArray);
-    alert(`${guess} is too high. you've guessed ${guessString}.`);
-  } else {
-    prevGuess = guess;
-    guessArray.push(prevGuess);
-    console.log(`${prevGuess}`); 
-    console.log(guessArray);
-    alert(`Yes! ${guess} was the secret number! You took ${guessArray.length} guesses. Press ok to end this game and start a new game.`);
-  }
-} */
