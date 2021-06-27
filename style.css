@@ -103,12 +103,12 @@ margin-top: -80px;
 }
 
 /**Visibility**/
-.show{
-display: block;
-}
+/* .show{
 
-/* .hide{
-display: none;
 } */
+
+.hide{
+display: none;
+}
 
 

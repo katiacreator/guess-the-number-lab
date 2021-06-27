@@ -10,15 +10,15 @@ const game = {
       this.smallestNum;
   },
 };
-game.instructions = "Pick a number between 0-100 to reveal the secret number!"
+game.instructions = "Pick a number between 0-100 to reveal the secret number!";
 //console.log(game.instructions)
 game.guess; //guess is updated to result of html form input
 //console.log(game.guess)
 game.prevGuess; //updated from guess input
 //console.log(game.prevGuess)
-game.guessArray = [1,3,87]; //push all prevGuesses to the guessArray
+game.guessArray = [1, 3, 87]; //push all prevGuesses to the guessArray
 //console.log(game.guessArray)
-game.guessString = game.guessArray.join(", ") 
+game.guessString = game.guessArray.join(", ");
 //console.log(game.guessString)
 
 //Call game play function to generate secret number here
@@ -31,8 +31,9 @@ game.play();
 // console.log(header)
 /* TOGGLE SELECTORS */
 // P tag to show/hide instructions for the game
-game.instructions = document.getElementById("p").textContent = "Pick a number between 0 - 100 to reveal the secret number!";
-//console.log(game.instructions)
+game.instructions = document.getElementById("p").textContent =
+  "Pick a number between 0 - 100 to reveal the secret number!";
+//console.log(game.instructions);
 // to show/hide game section
 game.section = document.querySelectorAll(".game-section");
 //console.log(game.section)
@@ -44,41 +45,57 @@ game.startBtn = document.getElementById("startBtn");
 game.resetBtn = document.getElementById("resetBtn");
 //console.log(game.resetBtn)
 
-/* CONTENT/VALUE SELECTORS */
+/* DIV/CONTENT SELECTORS */
+game.p = document.getElementById("p");
 // to select the number guess
-game.numInputVal = document.getElementById("section-number-input").value;
-console.log(game.numInputVal)
-// to SELECT secret number
-game.secretNumBoxText = document.getElementById("section-secret-number-box").textContent;
-console.log(game.secretNumBoxText = game.secretNum)
+game.numInput = document.getElementById("section-number-input");
+game.numInputVal = game.numInput.value;
+console.log(game.numInputVal);//BUG
+
+// to SELECT secret number Div to append secret num
+game.secretNumBox = document.getElementById(
+  "section-secret-number-box"
+);
+console.log((game.secretNumBox));
+game.secretNumBox.textContent = game.secretNum
+console.log(game.secretNumBox)
+
 //to display guesses
-game.guessLogText = document.getElementById("section-guess-log").value;
-console.log(game.guessLogText = `You've entered ${game.guessString}`)
+game.guessLog = document.getElementById("section-guess-log");
+game.guessLog.textContent = game.guessString
+console.log(game.guessLog)
 
 
 // console.log(game)
 //test push
-game.guessArray.push(game.numInputVal)
+game.guessArray.push(game.numInputVal);
 // game.numInputVal = game.guessArray[3]
-game.guess = game.numInputVal
-console.log(game.guessArray)
+game.guess = game.numInputVal;
+console.log(game.guessArray);
+game.guessLogText = `You've entered ${game.guessString}`;
+console.log(game.guessLogText);
 
 /* Event Listeners */
-submitBtn.addEventListener('click', function(){
-console.log("Submit button works!")
-console.log(`Value = ${game.numInputVal}`)
-})
-startBtn.addEventListener('click', function(){
-console.log("Start button works!")
-})
-resetBtn.addEventListener('click', function(){
-console.log("Reset button works!")
-})
-
+submitBtn.addEventListener("click", function () {
+  console.log(`Value = ${game.numInputVal}`);
+});
+startBtn.addEventListener("click", function () {
+  game.toggle(game.p);
+  game.toggle(game.resetBtn);
+  game.toggle(game.section);
+});
+resetBtn.addEventListener("click", function () {
+  game.toggle(game.smartBtn);
+});
 
 /** FUNCTIONS to be called **/
+//const toggle;//toggle class from who to hide-use query selector
+game.toggle = function (element) {
+  element.classList.toggle("hide");
+};
+
 /* 
-const toggle;//toggle class from who to hide-use query selector
+
 const checkInput;//function that pulls value from input
 const gameOver;//reveals secretNumberandreveals reset btn
 
@@ -90,13 +107,7 @@ const gameOver;//reveals secretNumberandreveals reset btn
   //Step 1 -call game.play to generate the secret number
   // call game.play();
 //Step 2 - call toggle function to show game section and remove startBtn and p tag
-// toggle (element){
-//   <!--    if (element.classList === "show") {
-//     element.classList === "hide"
-//   } else {
-//     x.classList = "show";
-//   }
-// }
+
 
 // } -->
 // <!-- toggle (element) => (element.classList === "show") ? element.classList === "hide" : x.classList = "show"; -->

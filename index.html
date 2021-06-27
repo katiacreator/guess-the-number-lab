@@ -34,7 +34,7 @@
         </p>
       </header>
       <!-- **user will input number guess here/ input box will dynamically be shown after start button is clicked**-->
-      <section id="section-number-guess" class="game-section section-2 hide">
+      <section id="section-number-guess" class="game-section section-2">
         <!-- Number Input info -->
         <span>
           Enter a number:
@@ -57,16 +57,16 @@
       </section>
 
       <!-- **secret Number will be revealed here ** -->
-      <section id="section-secret-number-box" class="game-section section-3 hide">?
+      <section id="section-secret-number-box" class="game-section section-3">${game.secretNum}
       </section>
       <!--  **number previously guessed box will dynamically be shown after start button is clicked **-->
-      <section id="section-guess-array" class="game-section section-4 hide">
-        <p id="section-guess-log">You've entered ?</p>
+      <section id="section-guess-array" class="game-section section-4">
+        <p id="section-guess-log">`You've entered ${game.guessString}`</p>
       </section>
       <!-- *Section with start and reset buttons* -->
       <section id="section-start-end">
         <!-- **start and reset buttons **-->
-        <button id="startBtn" class="btn start-end-section section-5 show">
+        <button id="startBtn" class="btn start-end-section section-5">
           START
         </button>
         <!-- reset button will dynamically be shown after game ends -->
