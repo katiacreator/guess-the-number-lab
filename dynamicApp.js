@@ -36,7 +36,7 @@ game.instructions = document.getElementById("p").textContent =
 //console.log(game.instructions);
 // to show/hide game section
 game.section = document.querySelectorAll(".game-section");
-//console.log(game.section)
+console.log(game.section)
 //when number is submitted in input and button is clicked number will show in the prevlog box after it is add to guessArray
 game.submitBtn = document.getElementById("submitBtn");
 //console.log(game.submitBtn)
@@ -49,35 +49,37 @@ game.resetBtn = document.getElementById("resetBtn");
 game.p = document.getElementById("p");
 // to select the number guess
 game.numInput = document.getElementById("section-number-input");
-game.numInputVal = game.numInput.value;
-console.log(game.numInputVal);//BUG
+
+console.log(`Bug, value is: ${game.numInput.value}`);//BUG FIXED!!!!
 
 // to SELECT secret number Div to append secret num
 game.secretNumBox = document.getElementById(
   "section-secret-number-box"
 );
-console.log((game.secretNumBox));
+//console.log((game.secretNumBox));
 game.secretNumBox.textContent = game.secretNum
-console.log(game.secretNumBox)
+//console.log(game.secretNumBox)
 
 //to display guesses
 game.guessLog = document.getElementById("section-guess-log");
-game.guessLog.textContent = game.guessString
-console.log(game.guessLog)
+game.guessLogText = `You've entered ${game.guessString}`;
+console.log(game.guessLogText);
+game.guessLog.textContent = game.guessLogText
 
 
 // console.log(game)
 //test push
-game.guessArray.push(game.numInputVal);
+game.guessArray.push(game.numInputVal);//This is a bug until i fix input value bug
 // game.numInputVal = game.guessArray[3]
 game.guess = game.numInputVal;
-console.log(game.guessArray);
-game.guessLogText = `You've entered ${game.guessString}`;
-console.log(game.guessLogText);
+// console.log(game.guessArray);
+
 
 /* Event Listeners */
 submitBtn.addEventListener("click", function () {
-  console.log(`Value = ${game.numInputVal}`);
+  game.guess = game.numInput.value
+console.log(game.guess)
+  //console.log(`Value = ${game.numInputVal}`);
 });
 startBtn.addEventListener("click", function () {
   game.toggle(game.p);
