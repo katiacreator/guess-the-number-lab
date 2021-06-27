@@ -21,26 +21,26 @@ console.log(game.guessArray)
 // game.guessString = guessArray.join(", ") 
 // console.log(game.guessString)
 
-/* //Call game play function to generate secret number here
+//Call game play function to generate secret number here
 game.play();
 //This is the secret number
-console.log(game.secretNum); */
+console.log(game.secretNum);
 
 /* SELECTORS */
 // const header = document.getElementById("header");
 // console.log(header)
-let pText = document.getElementById("p").textContent;
+game.pText = document.getElementById("p").textContent;
 console.log("🚀 ~ file: dynamicApp.js ~ line 33 ~ p", p)
 p = game.instructions
-console.log(p)
+console.log(game.pText)
 
-let numInputVal = document.getElementById("section-number-input").value;
-const submitBtn = document.getElementById("submitBtn");
-console.log(numInputVal)
-console.log(numInputVal = 22)
+game.numInputVal = document.getElementById("section-number-input").value;
+console.log(game.numInputVal)
+game.submitBtn = document.getElementById("submitBtn");
+console.log(game.submitBtn)
 
-const secretNumBoxText = document.getElementById("section-secret-number-box").textContent;
-console.log(secretNumBoxText)
+game.secretNumBoxText = document.getElementById("section-secret-number-box").textContent;
+console.log(game.secretNumBoxText = game.secretNum)
 // const submitBtn = document.getElementById("submitBtn");
 //console.log(numInputVal = 22)
 // const submitBtn = document.getElementById("submitBtn");
