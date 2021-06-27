@@ -58,13 +58,15 @@ game.secretNumBox = document.getElementById(
 );
 //console.log((game.secretNumBox));
 game.secretNumBox.textContent = game.secretNum
-//console.log(game.secretNumBox)
+console.log(game.secretNumBox)
 
 //to display guesses
 game.guessLog = document.getElementById("section-guess-log");
 game.guessLogText = `You've entered ${game.guessString}`;
 console.log(game.guessLogText);
 game.guessLog.textContent = game.guessLogText
+
+game.startEnd = document.getElementById("section-start-end");
 
 
 // console.log(game)
@@ -76,30 +78,53 @@ game.guess = game.numInputVal;
 
 
 /* Event Listeners */
+//To start the game
+startBtn.addEventListener("click", function () {
+  game.toggle(game.p);
+  game.secretNumBox.textContent = "?";
+  game.section.forEach(section => { 
+    game.toggle(section)
+  });
+  game.startEnd.remove(startBtn)
+});
+
+//To submit guess to check Input function
 submitBtn.addEventListener("click", function () {
   game.guess = game.numInput.value
 console.log(game.guess)
-  //console.log(`Value = ${game.numInputVal}`);
 });
-startBtn.addEventListener("click", function () {
-  game.toggle(game.p);
-  game.toggle(game.resetBtn);
-  game.toggle(game.section);
-});
+
+//To reset game
 resetBtn.addEventListener("click", function () {
-  game.toggle(game.smartBtn);
+  game.toggle(game.p);
+  game.guessLogText = "";
+  game.guessLog.textContent = game.guessLogText
+  game.section.forEach(section => { 
+    game.toggle(section)
+  });
+  game.startEnd.remove(resetBtn)
 });
 
 /** FUNCTIONS to be called **/
 //const toggle;//toggle class from who to hide-use query selector
 game.toggle = function (element) {
-  element.classList.toggle("hide");
+  if(element.classList === "hide"){
+    element.classList.toggle("hide");
+  } else {
+    element.classList.toggle("hide");
+  }
 };
 
-/* 
+game.gameOver = function (){
+//reveal secretnumber
+// reveal reset button
+  game.toggle(resetBtn);
+  //change guess log text
+  game.guessLogText = `Yes, ${game.guess} was the secret number. You took ${game.guessArray.length} guesses. Press reset button to start a new game`;
+  game.guessLog.textContent = game.guessLogText
+};
 
-const checkInput;//function that pulls value from input
-const gameOver;//reveals secretNumberandreveals reset btn
+//const checkInput;//function that pulls value from input
 
 
 //entire game function lives under this function??
@@ -115,7 +140,7 @@ const gameOver;//reveals secretNumberandreveals reset btn
 // <!-- toggle (element) => (element.classList === "show") ? element.classList === "hide" : x.classList = "show"; -->
 
 //Step 3 - create a while loop to call checkInput to get the value of numInput as game.guess
-checkInput(){
+//checkInput(){
     //grab the input value update it as game.guess
           //compare game.guess to game.secretNum
           // push game.guess to game.guessArray
@@ -125,11 +150,11 @@ checkInput(){
           //gameOver(){
               //step 1 toggle shows resetBtn
               //when resetBtn click handler runs toggle function that resets the og html settings so you can restart the game
-          }
+          //}
 
 // }; -->
 
-game.startGame ()
+//game.startGame ()
 
 /* while (guess !== game.secretNum) {
   guess = prompt(

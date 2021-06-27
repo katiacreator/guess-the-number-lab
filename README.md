@@ -68,9 +68,9 @@
 
 #*********************************************************************************
 ## EVENT LISTENERS TO BE CREATED
-#### create submitBtn event listener
-#### create a start button event listener
-#### create a resetBtn event listener
+#### create submitBtn event listener-DONE
+#### create a start button event listener-DONE
+#### create a resetBtn event listener-DONE
 
 #*********************************************************************************
 ## FUNCTIONS TO BE CREATED
@@ -82,16 +82,6 @@
   //Step 1 -call game.play to generate the secret number
   // call game.play();
 //Step 2 - call toggle function to show game section and remove startBtn and p tag
-// toggle (element){
-  <!--    if (element.classList === "show") {
-    element.classList === "hide"
-  } else {
-    x.classList = "show";
-  }
-}
-
-} -->
-<!-- toggle (element) => (element.classList === "show") ? element.classList === "hide" : x.classList = "show"; -->
 
 //Step 3 - create a while loop to call checkInput to get the value of numInput as game.guess
 checkInput(){
@@ -110,14 +100,14 @@ checkInput(){
 
 #### TOGGLE FUNCTION THAT SHOW/HIDES CLASS FOR
 ##### **(To apply DRY philosophy make one toggle function with the element as the parameter to be toggled in the function so i dont have to create 7 toggle functions)**
-##### p tag
-##### numInput section
-##### secretNum section
-##### secretNum text
-##### numGuessLog section 
-##### startBtn
-##### resetBTn
-#### checkInput function that pulls the value of the num typed by user
+##### p tag -DONE
+##### numInput section -DONE
+##### secretNum section -DONE
+##### secretNum text-DONE
+##### numGuessLog section-DONE 
+##### startBtn-DONE
+##### resetBTn-DONE
+#### checkInput function that pulls the value of the num typed by user-DONE
 ##### write code that will allow the user to input a number
 ##### write a function/if statement that number is compared to secret num and returns a dynamically generated ${prevGuess} is too low/high or you guessed the secret number
 ##### write a function that updates the previous guess on the next try while also logs the previously guess number in the guessed number log div
