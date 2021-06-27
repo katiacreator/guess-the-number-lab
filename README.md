@@ -76,6 +76,38 @@
 ## FUNCTIONS TO BE CREATED
 #### the game.play() function defines the secret number before the player inputs a number at start of the game-DONE
 #### the start button contains all functions of the game
+##### - <!-- game.startGame = function(){
+  //guess = prompt will become checkInput function
+  //change guess to game.guess
+  //Step 1 -call game.play to generate the secret number
+  // call game.play();
+//Step 2 - call toggle function to show game section and remove startBtn and p tag
+// toggle (element){
+  <!--    if (element.classList === "show") {
+    element.classList === "hide"
+  } else {
+    x.classList = "show";
+  }
+}
+
+} -->
+<!-- toggle (element) => (element.classList === "show") ? element.classList === "hide" : x.classList = "show"; -->
+
+//Step 3 - create a while loop to call checkInput to get the value of numInput as game.guess
+checkInput(){
+    //grab the input value update it as game.guess
+          //compare game.guess to game.secretNum
+          // push game.guess to game.guessArray
+          // dynamically show text of section-guess-array p tag = `You've entered ${guessString}`
+          // on else gamewin run function toggle to show the secret num in secretNumBox(secretNumBox.textContent = `${game.secreetNum}`) and shows total number of guesses in guess log as section-guess-array p tag = `Yes! ${game.guess} was the secret number! You took ${guessArray.length} guesses. Press reset to end this game and start a new game.`
+          //call function gameOver 
+          //gameOver(){
+              step 1 toggle shows resetBtn
+              //when resetBtn click handler runs toggle function that resets the og html settings so you can restart the game
+          }
+
+}; -->
+
 #### TOGGLE FUNCTION THAT SHOW/HIDES CLASS FOR
 ##### **(To apply DRY philosophy make one toggle function with the element as the parameter to be toggled in the function so i dont have to create 7 toggle functions)**
 ##### p tag
