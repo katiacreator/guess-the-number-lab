@@ -40,7 +40,7 @@
         <input
           type="text"
           id="section-number-input"
-          class="game-section numInput"
+          class="numInput"
           value="23"
         />
         <!-- number input submission button -->
@@ -59,7 +59,7 @@
       </section>
       <!--  **number previously guessed box will dynamically be shown after start button is clicked **-->
       <section id="section-guess-array" class="game-section section-4 hide">
-        <p>You've entered ?</p>
+        <p id="section-guess-log">You've entered ?</p>
       </section>
       <!-- *Section with start and reset buttons* -->
       <section id="section-start-end">
@@ -68,7 +68,7 @@
           START
         </button>
         <!-- reset button will dynamically be shown after game ends -->
-        <section id="resetBtn" class="btn section-5 hide">RESET</section>
+        <button id="resetBtn" class="btn section-5 hide">RESET</button>
       </section>
     </main>
   </body>

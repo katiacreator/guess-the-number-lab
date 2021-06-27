@@ -18,8 +18,8 @@ game.prevGuess; //updated from guess input
 console.log(game.prevGuess)
 game.guessArray = []; //push all prevGuesses to the guessArray
 console.log(game.guessArray)
-// game.guessString = guessArray.join(", ") 
-// console.log(game.guessString)
+game.guessString = game.guessArray.join(", ") 
+console.log(game.guessString)
 
 //Call game play function to generate secret number here
 game.play();
@@ -29,38 +29,39 @@ console.log(game.secretNum);
 /* SELECTORS */
 // const header = document.getElementById("header");
 // console.log(header)
-game.pText = document.getElementById("p").textContent;
-console.log("🚀 ~ file: dynamicApp.js ~ line 33 ~ p", p)
-p = game.instructions
-console.log(game.pText)
-
-game.numInputVal = document.getElementById("section-number-input").value;
-console.log(game.numInputVal)
+/* TOGGLE SELECTORS */
+// P tag to show/hide instructions for the game
+game.instructions = document.getElementById("p").textContent = "Pick a number between 0 - 100 to reveal the secret number!";
+console.log(game.instructions)
+// to show/hide game section
+game.section = document.querySelectorAll(".game-section");
+console.log(game.section)
+//when number is submitted in input and button is clicked number will show in the prevlog box after it is add to guessArray
 game.submitBtn = document.getElementById("submitBtn");
 console.log(game.submitBtn)
+game.startBtn = document.getElementById("startBtn");
+console.log(game.startBtn)
+game.resetBtn = document.getElementById("resetBtn");
+console.log(game.resetBtn)
 
+/* CONTENT/VALUE SELECTORS */
+// to select the number guess
+game.numInputVal = document.getElementById("section-number-input").value;
+console.log(game.numInputVal)
+// to SELECT secret number
 game.secretNumBoxText = document.getElementById("section-secret-number-box").textContent;
 console.log(game.secretNumBoxText = game.secretNum)
-// const submitBtn = document.getElementById("submitBtn");
-//console.log(numInputVal = 22)
-// const submitBtn = document.getElementById("submitBtn");
-//console.log(numInputVal = 22)
-// const submitBtn = document.getElementById("submitBtn");
-//console.log(numInputVal = 22)
-// const submitBtn = document.getElementById("submitBtn");
-//console.log(numInputVal = 22)
-// const submitBtn = document.getElementById("submitBtn");
-//console.log(numInputVal = 22)
-/* const secretNumBox;
-const numGuessLog;
-//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
-const submitBtn;
-const startBtn;
-const resetBtn; */
+//to display guesses
+game.guessLogText = document.getElementById("section-guess-log").textContent;
+console.log(game.guessLogText = `You've entered ${game.guessString}`)
+
+
+// console.log(game)
+
 
 
 /* Event Listeners */
-//numBtn;//click
+//submitBtn;//click
 //startBtn;//click
 //resetBtn;//click
 
