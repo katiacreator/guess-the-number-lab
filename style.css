@@ -1,63 +1,108 @@
 body {
   background-color: rgb(46, 47, 48);
-  color: aliceblue;
-  font-size: 2em;
+  color: turquoise;
+  font-size: 1em;
   text-align: center;
   padding: 10px 10px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  
+  
 }
-
+/*Flex Container*/
 #flex-container {
   border: deeppink solid 2px;
-  padding: 20px;
+  margin: 0 auto;
 }
 
+/**Sections**/
+.header-section, .game-section, 
+.start-end-section{
+  margin: 0 auto;
+}
+
+/**Header Section**/
 #header {
+  font-family: 'Teko', sans-serif;
+  font-size: 2em;
   border: blue solid 2px;
-  padding: 20px;
-  margin: 20px;
 }
 
-.p {
+#p {
+  /* font-family: 'Times', sans-serif; */
+  font-size: .7em;
   border: red solid 2px;
-  margin: 50px;
+margin-top: -80px;
 }
-#section-number-input {
+
+
+/**Game Section**/
+#section-number-guess {
+  font-size: 1.5em;
   border: lime solid 2px;
-  padding: 20px;
-  margin: 50px;
-  flex-wrap: wrap;
-}
-#numBtn {
-  border: deeppink solid 2px;
+  margin-top: 20px;
   padding: 20px;
 }
-#section-secret-number-box {
+
+#section-number-input {
+  font-size: 1em;
+  border: rgb(212, 140, 212) solid 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 20px;
+}
+
+#section-secret-number {
+  font-family: 'Teko', sans-serif;
+  font-size: 8em;
   border: orange solid 2px;
-  padding: 20px;
-  margin: 50px;
-}
-#section-number-guessed-log {
-  border: yellow solid 2px;
-  padding: 20px;
-  margin: 50px;
+  margin-top: 20px;
+  width: 100px;
+  padding: 20px 40px;
 }
 
-#startBtn{
-  border: rgb(247, 0, 255) solid 2px;
+#section-guess-array {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5em;
+  border: lightskyblue solid 4px;
   padding: 20px;
-  margin: auto 50px;
+  margin-top: 20px;
 }
 
-#resetBtn {
-  border: yellow solid 2px;
-  padding: 20px;
-  margin: 50px;
-}
+/**Buttons**/
 .btn {
-  border: white solid 2px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: .5em;
+  color: black;
+  border: deeppink solid 2px;
+  background-color: turquoise;
+  border-radius: 45px;
+  
+}
+
+#submitBtn {
   padding: 20px;
 }
 
+/**Start-End Section**/
+#section-start-end{
+  border: magenta 2px solid;
+  margin-top: 20px;
+  padding: 20px;
+}
+#startBtn, #resetBtn{
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+}
 
+/**Visibility**/
+.show{
+visibility: 1;
+}
+
+.hide{
+visibility: 0;
+}
 
 
