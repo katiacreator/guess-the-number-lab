@@ -10,21 +10,33 @@ const game = {
       this.smallestNum;
   },
 };
-
+game.instructions = "pick a number between 0-100"
+console.log(game.instructions)
+/* game.guess; //guess is updated to result of html form input
+console.log(game.guess)
+let game.prevGuess; //updated from guess input
+console.log(game.prevGuess)
+game.guessArray = []; //push all prevGuesses to the guessArray
+console.log(game.guessArray)
+game.guessString = guessArray.join(", ") 
+console.log(game.guessString)
+*/
 //Call game play function to generate secret number here
 game.play();
 //This is the secret number
 console.log(game.secretNum);
 
 /* SELECTORS */
-/* header;
-p;
-numInput;
-secretNumBox;
-numGuessLog;
-submitBtn;//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
-startBtn;
-resetBtn; */
+const header;
+const p;
+const numInput;
+const secretNumBox;
+const numGuessLog;
+//when number is submitted in input and button is clicked number will show in the prevlog box after it is addd to guessArray
+const submitBtn;
+const startBtn;
+const resetBtn;
+
 
 /* Event Listeners */
 //numBtn;//click
@@ -40,10 +52,10 @@ const endGame;//reveals secretNumberandreveals reset btn
 const reset;//resets all game html to OG settings */
 
 
-let guess; //guess is updated to result of html form input
+/* let guess; //guess is updated to result of html form input
 let prevGuess; //updated from guess input
 const guessArray = []; //push all prevGuesses to the guessArray
-let guessString = guessArray.join(", ")
+let guessString = guessArray.join(", ") */
 /* 
 while (guess !== game.secretNum) {
   guess = prompt(

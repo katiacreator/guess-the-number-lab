@@ -50,7 +50,8 @@ margin-top: -80px;
 
 #section-number-input {
   font-size: 1em;
-  border: rgb(212, 140, 212) solid 5px;
+  background-color: rgb(255, 255, 255); 
+  border-bottom: turquoise solid 5px;
   margin: 10px;
   padding: 20px;
   width: 40px;
@@ -60,7 +61,7 @@ margin-top: -80px;
 #section-secret-number {
   font-family: 'Teko', sans-serif;
   font-size: 8em;
-  border: orange solid 2px;
+  border: turquoise solid 2px;
   margin-top: 20px;
   width: 100px;
   padding: 20px 40px;
