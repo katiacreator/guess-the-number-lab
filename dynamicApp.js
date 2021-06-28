@@ -11,8 +11,7 @@ const game = {
   },
 };
 
-game.instructions = "Pick a number between 0-100 to reveal the secret number!";
-//console.log(game.instructions)
+// console.log(game.instructions);
 game.guess; //guess is updated to result of html form input
 //console.log(game.guess)
 game.prevGuess;
@@ -20,28 +19,21 @@ game.guessArray = []; //push all prevGuesses to the guessArray
 //console.log(game.guessArray)
 game.guessString = game.guessArray.join(", ");
 //console.log(game.guessString)
+console.log(game);
+
+/*------------------------ Cached Element References ------------------------*/
 
 /* SELECTORS */
-// const header = document.getElementById("header");
-// console.log(header)
-/* TOGGLE SELECTORS */
+/* DIV/CONTENT SELECTORS */
 // P tag to show/hide instructions for the game
-game.instructions = document.getElementById("p").textContent =
-  "Pick a number between 0 - 100 to reveal the secret number!";
-//console.log(game.instructions);
+game.p = document.getElementById("p");
+console.log("game.p: ", game.p);
 // to show/hide game section
 game.section = document.querySelectorAll(".game-section");
+//This is the form div where numInput lives
+game.form = document.querySelector("form");
+console.log("form: ", game.form);
 
-//when number is submitted in input and button is clicked number will show in the prevlog box after it is add to guessArray
-game.submitBtn = document.getElementById("submitBtn");
-//console.log(game.submitBtn)
-game.startBtn = document.getElementById("startBtn");
-//console.log(game.startBtn)
-game.resetBtn = document.getElementById("resetBtn");
-//console.log(game.resetBtn)
-
-/* DIV/CONTENT SELECTORS */
-game.p = document.getElementById("p");
 // to select the number guess
 game.numInput = document.getElementById("section-number-input");
 console.log(`Bug, value is: ${game.numInput.value}`); //BUG FIXED!!!!
@@ -57,13 +49,78 @@ game.guessLog = document.getElementById("section-guess-log");
 //to display buttons
 game.startEnd = document.getElementById("section-start-end");
 
+/* BUTTON SELECTORS */
+//when number is submitted in input and button is clicked number will show in the prevlog box after it is add to guessArray
+game.submitBtn = document.getElementById("submitBtn");
+//console.log(game.submitBtn)
+game.startBtn = document.getElementById("startBtn");
+//console.log(game.startBtn)
+game.resetBtn = document.getElementById("resetBtn");
+//console.log(game.resetBtn)
+
+/*----------------------------- Event Listeners -----------------------------*/
+
+
+  
+
+
+//To reset game
+game.resetBtn.addEventListener("click", function () {
+  console.log("resetButton is clicked");
+  // game.toggle(game.p);
+  // game.guessLogText = "";
+  // game.guessLog.textContent = game.guessLogText;
+  // game.section.forEach((section) => {
+  //   game.toggle(section);
+  // });
+  // game.startEnd.remove(game.resetBtn);
+});
+
+// form.addEventListener("reset", init);
+
+//To submit guess to check Input function
+game.form.addEventListener("submit", function (evt) {
+  evt.preventDefault(); //prevents page from reloading on input
+  console.log(game.numInput.value, `submitbutton clicked`)
+  // if (!isWinner) {
+  //   checkGuess(parseInt(game.numInput.value));
+  // }
+});
+
+/*-------------------------------- Functions --------------------------------*/
+
 /** FUNCTIONS to be called **/
 //const toggle;//toggle class from who to hide-use query selector
 game.toggle = function (element) {
   element.classList.toggle("hide");
+}; 
+
+game.init = function () {
+  console.log("startButton is clicked");
+  game.guessLogText = "";
+  game.toggle(game.p);
+  game.secretNumBox.textContent = "?";
+  game.guessLogText = " ";
+  game.section.forEach((section) => {
+    game.toggle(section);
+  });
+  game.startEnd.remove(game.startBtn);
+  game.resetBtn.setAttribute("hidden", true);
+  game.guessArray = [];
+  isWinner = false;
+  //Call game play function to generate secret number here
+  game.play();
+  //This is the secret number
+  console.log(game.secretNum);
+  // render();
 };
 
-game.gameOver = function () {
+//To start the game
+game.startBtn.addEventListener("click", game.init)
+
+
+
+/* game.gameOver = function () {
   game.prevGuess = game.guess;
   game.guessArray.push(game.prevGuess);
   //reveal secretnumber
@@ -72,21 +129,9 @@ game.gameOver = function () {
   game.guessLogText = `Yes, ${game.guess} was the secret number! You took ${game.guessArray.length} guess(es). Press reset button to start a new game`;
   game.guessLog.textContent = game.guessLogText;
   // reveal reset button-BUG
-};
+};  */
 
-//Call game play function to generate secret number here
-game.play();
-//This is the secret number
-console.log(game.secretNum);
-
-/* // game.gameGuess = function (param) {
-//   game.prevGuess = game.guess;
-//   game.guessArray.push(game.prevGuess);
-//   // console.log(`${game.prevGuess}`);
-//   // console.log(game.guessArray);
-//   game.guessLog.textContent = `${game.prevGuess} was too ${param}. You've guessed ${game.guessString} so far.`;
-// } */
-game.checkInput = function () {
+/* game.checkInput = function () {
   while (game.guess !== game.secretNum) {
     game.guess = parseInt(game.numInput.value);
     if (game.guess < game.secretNum) {
@@ -107,7 +152,7 @@ game.checkInput = function () {
   }
 };
 
-game.startGame = function () {
+game.init = function () {
   game.toggle(game.p);
   game.secretNumBox.textContent = "?";
   game.guessLogText = " ";
@@ -115,26 +160,4 @@ game.startGame = function () {
     game.toggle(section);
   });
   game.startEnd.remove(game.startBtn);
-};
-
-/* Event Listeners */
-//To start the game
-startBtn.addEventListener("click", function () {
-  game.startGame();
-});
-
-//To submit guess to check Input function
-submitBtn.addEventListener("click", function () {
-  game.checkInput();
-});
-
-//To reset game
-resetBtn.addEventListener("click", function () {
-  game.toggle(game.p);
-  game.guessLogText = "";
-  game.guessLog.textContent = game.guessLogText;
-  game.section.forEach((section) => {
-    game.toggle(section);
-  });
-  game.startEnd.remove(game.resetBtn);
-});
+}; */
