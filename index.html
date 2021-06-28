@@ -4,74 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS for the entire game -->
-    <!-- *Google Fonts rubik, Teko, Ubuntu* -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Teko:wght@500&family=Ubuntu:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
     <!-- *Overall CSS Stylesheet* -->
     <link rel="stylesheet" href="style.css" />
     <!-- *appjs is for primary game code* -->
     <script defer src="app.js"></script>
-    <!-- has all the console.logs for review purposes -->
-    <!-- <script defer src="consoled-app.js"></script> -->
-    <!-- this is for the game version that dynamically adds the html -->
-    <!-- <script defer src="dynamicapp.js"></script> -->
-    <!-- *resetjs is for js to restart the game if i have time *-->
-    <!-- <script defer src="reset.js"></script> -->
     <title>Guess The Number</title>
   </head>
   <body>
-    <!-- Entire HTML will live in this flexbox container ( all will be dynamically added) -->
-    <main id="flex-container">
-      <!-- **Header Section **-->
-      <header id="header" class="header-section section-1">
-        <h1 id="header">Guess The Number</h1>
-        <p id="p" class="header-section section-1 show">?
-        </p>
-      </header>
-      <!-- **user will input number guess here/ input box will dynamically be shown after start button is clicked**-->
-      <section id="section-number-guess" class="game-section section-2 hide">
-        <!-- Number Input info -->
-        <span>
-          Enter a number:
-          </span> 
-          <input
-          type="text"
-          id="section-number-input"
-          class="numInput"
-          value=""
-          />
-          <!-- number input submission button -->
-          <button
-          id="submitBtn"
-          class="btn section-2"
-          name="guess"
-          type="submit"
-          >
-          SUBMIT
-        </button>
-      </section>
-
-      <!-- **secret Number will be revealed here ** -->
-      <section id="section-secret-number-box" class="game-section section-3 hide"> <p id="section-secret-number"></p>
-      </section>
-      <!--  **number previously guessed box will dynamically be shown after start button is clicked **-->
-      <section id="section-guess-array" class="game-section section-4 hide">
-        <p id="section-guess-log"></p>
-      </section>
-      <!-- *Section with start and reset buttons* -->
-      <section id="section-start-end">
-        <!-- **start and reset buttons **-->
-        <button id="startBtn" class="btn start-end-section section-5">
-          START
-        </button>
-        <!-- reset button will dynamically be shown after game ends -->
-        <button id="resetBtn" class="btn section-5 hide">RESET</button>
-      </section>
-    </main>
+    
   </body>
 </html>
