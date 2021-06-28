@@ -13,15 +13,6 @@ const game = {
   game.play();
   console.log(game.secretNum);
   
-  // prompt to enter their guess
-  /* ### variables to create
-  - guess, guessArray, guess is updated to result of prompt; prevGuess is guessArray[guessArray.length - 1] , numGuesses = guessArray.length, guessString, and the following 
-  ### alert template literals
-  - tooLowAlert = `${prevGuess} is too low. you've guessed ${guessString}.`
-  - tooHighAlert = `${prevGuess} is too high. you've guessed ${guessString}.`
-  - winAlert = `Yes, ${prevGuess} was the secret number. You took ${numGuesses} guesses.`
-  ### functions/methods to create
-  -while loop, prompt, if/else statment comparing guess to secret number */
   
   let guess; //guess is updated to result of prompt
   let prevGuess; 
