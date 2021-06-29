@@ -17,7 +17,10 @@ let guessArray, isWinner, guessString;
 /* SELECTORS */
 /* DIV/CONTENT SELECTORS */
 // P tag to show/hide instructions for the game
-const p = document.getElementById("p");
+const headerH1 = document.getElementById("header-h1");
+headerH1.textContent = "GUESS THE NUMBER"
+// P tag to show/hide instructions for the game
+const pHeader = document.getElementById("p-header");
 const instructions = "Pick a number between 0-100 to reveal the secret number!";
 // to show/hide game section
 const gameSection = document.querySelectorAll(".game-section");
@@ -61,7 +64,7 @@ form.addEventListener("submit", function (evt) {
 // init();
 
 function init() {
-  p.innerText = instructions;
+  pHeader.innerText = instructions;
   guessLog.textContent =
     "Psst! Hey you! Look here to see if you guessed correctly or if you guessed too low/high.";
   secretNumBox.textContent = "?";

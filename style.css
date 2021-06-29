@@ -6,10 +6,12 @@ body {
   padding: 10px 10px;
   font-family: "Rubik", sans-serif;
   font-size: 20px;
+  height: 100px;
 }
+
 /*Flex Container*/
 #flex-container {
-  border: turquoise solid 1px;
+  border: deeppink solid 1px;
   margin: 0 auto;
 }
 
@@ -28,14 +30,17 @@ body {
   margin-top: 80px;
 }
 
-#header h1 {
+#header-h1 {
+  font-family: "Teko", sans-serif;
+  font-size: em;
   margin-top: -80px;
 }
 
-#p {
+#p-header {
   /* font-family: 'Times', sans-serif; */
-  font-size: 0.7em;
-  margin-top: -80px;
+  color: lightgrey;
+  font-size: 1em;
+  margin-top: -20px;
 }
 
 /**Game Section**/
@@ -57,34 +62,36 @@ body {
 }
 
 #section-secret-number-box {
+  border: white solid 3px;
   font-family: "Teko", sans-serif;
   font-size: 8em;
-  border: turquoise solid 1px;
+  color: deeppink;
+  border: red solid 2px;
   margin-top: 20px;
   width: 100px;
   padding: 30px 80px;
   text-align: center;
-  animation: animate 
-      1.5s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 @keyframes animate {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
 
   40% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 #section-guess-array {
   font-family: "Rubik", sans-serif;
   font-size: 1.5em;
+  color: deeppink;
   /* border: lightskyblue solid 4px; */
   padding: 20px;
   margin-top: 20px;
@@ -116,6 +123,7 @@ body {
   font-size: 2em;
   font-weight: bold;
   padding: 20px;
+  margin-top: 40px;
 }
 
 /**Visibility**/
