@@ -1,3 +1,4 @@
+console.log("wah")
 const game = {
     title: "Guess the Number!",
     biggestNum: 100,
