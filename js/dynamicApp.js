@@ -23,7 +23,8 @@ headerH1.textContent = "GUESS THE NUMBER"
 const pHeader = document.getElementById("p-header");
 const instructions = "Pick a number between 0-100 to reveal the secret number!";
 // to show/hide game section
-const guessSection = document.querySelectorAll(".guess-section");
+const gameSection = document.querySelectorAll(".guess-section");
+const numberSection = document.querySelector("number-section");
 const form = document.querySelector("form");
 const numInput = document.getElementById("section-number-input");
 // to SELECT secret number Div to append secret num
@@ -68,7 +69,7 @@ function init() {
   guessLog.textContent =
     "Psst! Hey you! Look here to see if you guessed correctly or if you guessed too low/high.";
   secretNumBox.textContent = "?";
-  guessSection.forEach((section) => {
+  gameSection.forEach((section) => {
     toggle(section);
   });
   // // startEnd.remove(startBtn);
