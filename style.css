@@ -28,18 +28,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: red dotted 5px;
+    /* border: red dotted 5px; */
 }
 
 #header {
   font-family: "Teko", sans-serif;
   font-size: 1em;
   text-align: center;
-  margin-top: -10px;
+  margin-top: -100px;
 }
 
 #header-h1 {
-  border: magenta solid 2px;
+  /* border: magenta solid 2px; */
   font-family: "Teko", sans-serif;
   font-size: 3em;
   letter-spacing: 3px;
@@ -47,7 +47,7 @@ body {
 }
 
 #p-header {
-  border: yellow solid 2px;
+  /* border: yellow solid 2px; */
   color: lightgrey;
   font-size: 2em;
   margin-top: -40px;
@@ -57,30 +57,41 @@ body {
 #section-game-div{
   width: 900px;
     height: 260px; 
-    margin-top: -100px;
+    margin-top: -150px;
     display: flex;
    flex-direction: row;
-    border: pink dotted 5px;
+    /* border: pink dotted 5px; */
 } 
 
 .game-section,
 .number-section {
   width: 900px;
     height: 200px; 
-    margin: 25px;
+    margin: -25px;
     display: flex;
    flex-direction: row;
    justify-content: space-evenly;
-    border: red dotted 5px;
+    /* border: red dotted 5px; */
 } 
+
+.number-section {
+  width: 900px;
+    height: 200px; 
+    margin: -25px;
+    display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+    /* border: red dotted 5px; */
+}
 
 #section-number-guess {
   width: 300px;
     height: 200px; 
   font-size: 1.5em;
-  border: lime solid 2px;
+  /* border: lime solid 2px; */
   flex-direction: column;
     justify-content: center;
+    padding: 10px;
 }
 
 #section-number-input {
@@ -89,14 +100,19 @@ body {
   background-color: rgb(255, 255, 255);
   border-bottom: turquoise solid 5px;
   text-align: center;
+  
 }
 
 #section-secret-number-box {
-  border: red solid 3px;
+  /* border: red solid 3px; */
   font-family: "Teko", sans-serif;
   font-size: 8em;
   color: deeppink;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    padding: 10px;
   animation: animate 1.5s linear infinite;
 }
 
@@ -116,9 +132,13 @@ body {
 
 #section-guess-array {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
-  color: lightgrey;
-  /* border: lightskyblue solid 4px; */
+  font-size: .9em;
+  letter-spacing: 2px;
+  color: orange;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
 }
 
 /**Buttons**/
@@ -133,14 +153,17 @@ body {
 
 #submitBtn {
   padding: 20px;
+  margin-top: 15px;
 }
 
 /**Start-End Section**/
 #section-start-end {
   border: magenta 2px solid;
   justify-content: center;
-  margin-top: -150px;
-  flex-grow: 1;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
 }
 
 #startBtn,
@@ -148,6 +171,11 @@ body {
   font-size: 2em;
   font-weight: bold;
   padding: 20px;
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
+.hide{
+  display: none;
+}

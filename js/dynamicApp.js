@@ -23,7 +23,7 @@ headerH1.textContent = "GUESS THE NUMBER"
 const pHeader = document.getElementById("p-header");
 const instructions = "Pick a number between 0-100 to reveal the secret number!";
 // to show/hide game section
-const gameSection = document.querySelectorAll(".guess-section");
+const gameSection = document.querySelectorAll(".game-section");
 const numberSection = document.querySelector("number-section");
 const form = document.querySelector("form");
 const numInput = document.getElementById("section-number-input");
@@ -62,7 +62,7 @@ form.addEventListener("submit", function (evt) {
   }
 });
 /*-------------------------------- Functions --------------------------------*/
-// init();
+
 
 function init() {
   pHeader.innerText = instructions;
@@ -72,8 +72,7 @@ function init() {
   gameSection.forEach((section) => {
     toggle(section);
   });
-  // // startEnd.remove(startBtn);
-  resetBtn.removeAttribute("hidden", true);
+  startEnd.remove(startBtn);
   guessArray = [];
   toggle(startBtn);
 
@@ -123,7 +122,8 @@ function renderError(error) {
 
 function renderWin() {
   secretNumBox.textContent = `${secretNum}`;
-  secretNumBox.removeAttribute('.animate');
+  secretNumBox.removeAttribute('animate');
+ toggle(resetBtn)
   guessLog.textContent = `Yes! ${secretNum} was the secret number! You took ${guessArray.length} guess(es). Press reset button to see if you can do that again!`;
   if (guessArray.length === 1) {
     guessLog.textContent = `You're a wizard. You just guessed the secret number: ${secretNum} in one guess! Press reset to see if you can do that again!`;
@@ -140,7 +140,6 @@ function renderGuess(lastGuess) {
     guessLog.textContent = `Oof! ${lastGuess} was too high. Don't forget, you've guessed ${guessString} so far.`;
   }
 }
-
 
 function toggle(element) {
   element.classList.toggle("hide");
