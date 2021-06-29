@@ -39,7 +39,7 @@ const startEnd = document.getElementById("section-start-end");
 submitBtn = document.getElementById("submitBtn");
 //console.log(game.submitBtn)
 startBtn = document.getElementById("startBtn");
-console.log(startBtn)
+
 resetBtn = document.getElementById("resetBtn");
 //console.log(game.resetBtn)
 
@@ -123,8 +123,8 @@ function renderWin() {
   if (guessArray.length === 1) {
     guessLog.textContent = `You're a wizard. You just guessed the secret number: ${secretNum} in one guess! Press reset to see if you can do that again!`;
   } else {
-    console.log(guessArray)
-    guessLog.textContent = `Congratulations! You found the secret number ${secretNum} in ${guessArray.length} guesses!`;
+    
+    guessLog.textContent = `Congratulations! You found the secret number ${secretNum} in ${guessArray.length} guesses! Press reset to see if you can do that again!`;
   }
 }
 
