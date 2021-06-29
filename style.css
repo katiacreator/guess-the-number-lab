@@ -1,11 +1,11 @@
 body {
   background-color: rgb(46, 47, 48);
-  
+  margin: 0 auto;
 }
 
 /*Flex Container*/
 #flex-container {
-  border: yellow solid 2px;
+  /* border: yellow solid 2px; */
   color: turquoise;
   text-align: center;
   padding: 10px 10px;
@@ -17,6 +17,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100vh;
+  margin: 0 auto;
 }
 
 /**Sections**/
@@ -57,9 +58,10 @@ body {
 #section-game-div{
   width: 900px;
     height: 260px; 
-    margin-top: -150px;
+    /* margin-top: -150px; */
     display: flex;
    flex-direction: row;
+   margin: 0 auto;
     /* border: pink dotted 5px; */
 } 
 

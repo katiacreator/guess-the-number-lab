@@ -21,7 +21,7 @@ const headerH1 = document.getElementById("header-h1");
 headerH1.textContent = "GUESS THE NUMBER"
 // P tag to show/hide instructions for the game
 const pHeader = document.getElementById("p-header");
-const instructions = "Pick a number between 0-100 to reveal the secret number!";
+const instructions = "Pick a number between 1-100 to reveal the secret number!";
 // to show/hide game section
 const gameSection = document.querySelectorAll(".game-section");
 const numberSection = document.querySelector("number-section");
@@ -62,9 +62,11 @@ form.addEventListener("submit", function (evt) {
   }
 });
 /*-------------------------------- Functions --------------------------------*/
-
+// init();
 
 function init() {
+  // console.log(resetBtn);
+  // toggle(smartBtn);
   pHeader.innerText = instructions;
   guessLog.textContent =
     "Psst! Hey you! Look here to see if you guessed correctly or if you guessed too low/high.";
@@ -72,14 +74,13 @@ function init() {
   gameSection.forEach((section) => {
     toggle(section);
   });
-  startEnd.remove(startBtn);
   guessArray = [];
   toggle(startBtn);
 
   //Call game play function to generate secret number here
   game.play();
   secretNum = game.secretNum;
-  console.log(secretNum);
+  // console.log(secretNum);
   //This is the secret number
  
   isWinner = false;
@@ -106,7 +107,7 @@ function render() {
   if (guessArray.length === 1) {
     console.log(guessArray)
     guessLog.textContent = `You've just entered ${lastGuess}`;
-    resetBtn.removeAttribute("hidden");
+   
   }
 
   if (isWinner) {
@@ -122,8 +123,8 @@ function renderError(error) {
 
 function renderWin() {
   secretNumBox.textContent = `${secretNum}`;
-  secretNumBox.removeAttribute('animate');
- toggle(resetBtn)
+  // secretNumBox.removeAttribute('animate');
+ 
   guessLog.textContent = `Yes! ${secretNum} was the secret number! You took ${guessArray.length} guess(es). Press reset button to see if you can do that again!`;
   if (guessArray.length === 1) {
     guessLog.textContent = `You're a wizard. You just guessed the secret number: ${secretNum} in one guess! Press reset to see if you can do that again!`;
