@@ -78,7 +78,7 @@ function init() {
   console.log(game.secretNum);
   secretNum = game.secretNum;
   //This is the secret number
-  console.log(`${secretNum} is the secret number. delete this after testing.`);
+ 
   isWinner = false;
   render();
 }
