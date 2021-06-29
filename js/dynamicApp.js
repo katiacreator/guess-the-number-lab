@@ -71,6 +71,7 @@ function init() {
   // startEnd.remove(startBtn);
   resetBtn.setAttribute("hidden", true);
   guessArray = [];
+  toggle(startBtn);
 
   //Call game play function to generate secret number here
   game.play();
