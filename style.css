@@ -63,8 +63,24 @@ body {
   margin-top: 20px;
   width: 100px;
   padding: 30px 80px;
+  text-align: center;
+  animation: animate 
+      1.5s linear infinite;
 }
 
+@keyframes animate {
+  0% {
+      opacity: 0;
+  }
+
+  40% {
+      opacity: 0.9;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
 
 #section-guess-array {
   font-family: "Rubik", sans-serif;
