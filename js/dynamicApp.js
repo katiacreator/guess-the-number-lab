@@ -39,7 +39,7 @@ const startEnd = document.getElementById("section-start-end");
 submitBtn = document.getElementById("submitBtn");
 //console.log(game.submitBtn)
 startBtn = document.getElementById("startBtn");
-//console.log(game.startBtn)
+console.log(startBtn)
 resetBtn = document.getElementById("resetBtn");
 //console.log(game.resetBtn)
 
@@ -58,7 +58,7 @@ form.addEventListener("submit", function (evt) {
   }
 });
 /*-------------------------------- Functions --------------------------------*/
-init();
+// init();
 
 function init() {
   p.innerText = instructions;
@@ -68,7 +68,7 @@ function init() {
   gameSection.forEach((section) => {
     toggle(section);
   });
-  startEnd.remove(startBtn);
+  // startEnd.remove(startBtn);
   resetBtn.setAttribute("hidden", true);
   guessArray = [];
 
@@ -87,20 +87,20 @@ function checkGuess(guess) {
   if (isNaN(guess) || guess < 1 || guess > 100) {
     renderError("Whoops! Please enter a number from 1 to 100.");
     return; //we dont want that error guess pushed to the array!
-  } else if (guess === this.secretNum) {
+  } else if (guess === secretNum) {
     isWinner = true;
   }
   guessArray.push(guess);
+  console.log(guessArray)
   render();
 }
 
 function render() {
   guessString = guessArray.join(", ");
-  const lastGuess = guessArray[guessArray.length - 1];
   guessLog.textContent = guessString;
-
+  const lastGuess = guessArray[guessArray.length - 1];
   if (guessArray.length === 1) {
-    guessArray.push(lastGuess);
+    console.log(guessArray)
     guessLog.textContent = `You've just entered ${lastGuess}`;
     resetBtn.removeAttribute("hidden");
   }
@@ -118,11 +118,11 @@ function renderError(error) {
 
 function renderWin() {
   secretNumBox.textContent = `${secretNum}`;
-  guessArray.push(game.guess);
-  guessLog.textContent = `Yes! ${game.lastGuess} was the secret number! You took ${guessArray.length} guess(es). Press reset button to see if you can do that again!`;
+  guessLog.textContent = `Yes! ${secretNum} was the secret number! You took ${guessArray.length} guess(es). Press reset button to see if you can do that again!`;
   if (guessArray.length === 1) {
-    guessLog.textContent = `You're a wizard. You just guessed the secret number: ${lastGuess} in one guess! Press reset to see if you can do that again!`;
+    guessLog.textContent = `You're a wizard. You just guessed the secret number: ${secretNum} in one guess! Press reset to see if you can do that again!`;
   } else {
+    console.log(guessArray)
     guessLog.textContent = `Congratulations! You found the secret number ${secretNum} in ${guessArray.length} guesses!`;
   }
 }
