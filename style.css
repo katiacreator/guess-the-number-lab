@@ -24,29 +24,28 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: red dotted 5px;
 }
-/* .header-section,
+
+
 .game-section,
-.start-end-section,
 .guess-section {
-  /* width: 200px;
-    height: 200px; */
-/*     margin: 5px;
+  /* width: 100px;
+    height: 100px;  */
+    margin: 5px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+   flex-direction: column;
     border: red dotted 5px;
-} */ */
+} 
 
 /**Header Section**/
 #header {
   font-family: "Teko", sans-serif;
   text-align: center;
-  margin-top: -100px;
+  margin-top: -10px;
 }
 
 #header-h1 {
