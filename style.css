@@ -20,6 +20,7 @@ body {
 }
 
 /**Sections**/
+/**Header Section**/
 .header-section {
     margin: 0 auto;
     display: flex;
@@ -30,18 +31,6 @@ body {
     border: red dotted 5px;
 }
 
-
-.game-section,
-.guess-section {
-  /* width: 100px;
-    height: 100px;  */
-    margin: 5px;
-    display: flex;
-   flex-direction: column;
-    border: red dotted 5px;
-} 
-
-/**Header Section**/
 #header {
   font-family: "Teko", sans-serif;
   text-align: center;
@@ -64,12 +53,31 @@ body {
 }
 
 /**Game Section**/
+#section-game-div{
+  width: 1000px;
+    height: 300px; 
+    margin: 5px;
+    display: flex;
+   flex-direction: row;
+    border: pink dotted 5px;
+} 
+.game-section,
+.guess-section {
+  /* width: 100px;
+    height: 100px;  */
+    margin: 5px;
+    display: flex;
+   flex-direction: row;
+    border: red dotted 5px;
+} 
+
 #section-number-guess {
+  width: 400px;
+    height: 200px; 
   font-size: 1.5em;
   border: lime solid 2px;
-  /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center; */
+  flex-direction: column;
+    justify-content: center;
 }
 
 #section-number-input {
