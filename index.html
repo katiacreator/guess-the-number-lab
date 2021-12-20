@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- *Overall CSS Stylesheet* -->
-    <!-- <link rel="stylesheet" href="/style.css" /> -->
-    <!-- *appjs is for primary game code* -->
-    <script defer src="app.js"></script>
-    <title>Guess The Number</title>
-  </head>
-  <body>
-     
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Secret Number DEV</title>
+</head>
+<body>
+  <main id="main-container">
+    <header id="header-container">
+      <div class="title">Secret Number</div>
+      <div class="instructions">Guess the correct number between 1 and 100</div>
+    </header>
+    <div id="grid-container">
+      <!-- Numbers Grid to be used for thumbnail shot and hold numbers grid for screen display 1-->
+    </div>
+    <div id="timer-container">
+      <!-- timer goes here -->00:00
+    </div>
+    <div id="btn-container">
+      <!-- start and reset btn group goes here -->
+      <button class="start-btn show" id="start">START</button>
+      <button class="reset-btn hide" id="reset" disabled>RESET</button>
+    </div>
+    <div id="guess-container">
+      <!-- guess input -->
+    </div>
+    <div id="msg-container">
+      <!-- displaying too low/high msg goes here -->
+    </div>
+    <div id="score-container">
+      <!-- displaying final scores and msg -->
+    </div>
+  </main>
+</body>
 </html>
