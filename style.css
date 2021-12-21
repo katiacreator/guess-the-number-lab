@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
-/* 
-font-family: "Teko", sans-serif;
-font-family: "Ubuntu", sans-serif; */
+:root{
+  --primary: #000;
+  --secondary: cyan;
+  --tertiary: #f4ebe8;
+  --accent-primary: #3993dd;
+  --accent-secondary: #1d1d1d;
+  --accent-tertiary: #8d9194;
+}
+
 
 body {
-  background-color: #111;
+  background-color: var(--primary);
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
@@ -22,29 +28,41 @@ body {
 
 /*! screen display */
 #main-container{
-  font-family: 'font-family: "Teko", sans-serif;';
-  color: aliceblue;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--tertiary);
   text-align: center;
   max-width: 100vw;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 0 0 18px var(--accent-primary);
+  background-color: var(--primary);
   /* border: solid lime 2px; */
+  /* padding: 30px 10px; */
 }
 
 /* header:title and instructions */
 #header-container{
   font-family: "Rubik", sans-serif;
   margin-top: 20px;
+  color: var(--tertiary);
 }
 
 /* Secret Number title heading */
-.title{
+.title {
   font-size: 3.5rem;
+  font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 /* instructions div */
 .instructions{
-  font-size:  1.3rem;
+  font-weight: 400;
+  font-size:  1.5rem;
   letter-spacing: 2px;
 }
 
@@ -52,16 +70,20 @@ body {
 #timer-container{
   font-family: "Teko", sans-serif;
   font-size: 4rem;
-  color: turquoise;
+  color: var(--secondary);
 }
 
+/* only for start and reset btns */
 #btn-container{
   /* border: purple solid 2px; */
+  padding-bottom: 10px;;
 }
 
+
+/* style all buttons for this app the same here */
 button{
   /* border: solid red 2px; */
-  background-color: aliceblue;
+  background-color: var(--tertiary);
   font-family: "Rubik", sans-serif;
   font-size: 2rem;
   font-weight: 500;
@@ -72,19 +94,21 @@ button{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 5px 65px;
-  border-radius: 45px;
+  padding: 5px 25px;
+  border-radius: 25px;
+  border: none;
+}
+
+button:hover{
+  background-color: var(--accent-tertiary);
 }
 
 .hide{
   display: none;
 }
 
-button:hover{
-  background-color: rgb(96, 210, 245);
-}
 
-
+/* ! squares number grid for start screen display */
 #grid-container{
   /* border: solid lime 2px; */
   display: flex; /* display squares in a row instead of a column*/
@@ -93,28 +117,30 @@ button:hover{
   flex-wrap: wrap;
   max-width: 600px;
   padding: 10px 0;
-  margin: 0 10px;
-  /* max-width: calc(100% - 610px); */
+  margin: 15px 10px;
 }
 
 .square{
   /* border: solid lime 2px; */
-  background-color: #1d1d1d;
-  box-shadow: 0 0 2px #000;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  background-color: var(--accent-secondary);
+  box-shadow: 0 0 2px var(--primary);
   height: 50px;
   width: 50px;
-  margin: 5px;
-  color: white;
+  margin: 3px;
+  color: var(--tertiary);
   line-height: 50px;
   text-align: center;
-  transition: 2s ease;
+  transition: 4s ease;
 }
 
 .square:hover{
-  transform-duration: 3s ;
+  transform-duration: 2s ;
 }
 
 /* 
 #guess-container
 #msg-container
 #score-container */
+
