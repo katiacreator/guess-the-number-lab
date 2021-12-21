@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS for the entire game -->
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <title>Secret Number DEV</title>
@@ -12,27 +13,33 @@
   <main id="main-container">
     <header id="header-container">
       <div class="title">Secret Number</div>
-      <div class="instructions">Guess the correct number between 1 and 100</div>
+      <div class="instructions">Guess the number between 1 and 100</div>
     </header>
     <div id="grid-container">
-      <!-- Numbers Grid to be used for thumbnail shot and hold numbers grid for screen display 1-->
-    </div>
-    <div id="timer-container">
-      <!-- timer goes here -->00:00
-    </div>
-    <div id="btn-container">
-      <!-- start and reset btn group goes here -->
-      <button class="start-btn show" id="start">START</button>
-      <button class="reset-btn hide" id="reset" disabled>RESET</button>
     </div>
     <div id="guess-container">
       <!-- guess input -->
+      <form>
+        <span></span>
+        <input id="guess-input" placeholder="#" type="text" />
+        <!-- number input submission button -->
+        <button id="submit-btn" type="submit">
+          enter
+        </button>
+      </form>
     </div>
     <div id="msg-container">
       <!-- displaying too low/high msg goes here -->
     </div>
     <div id="score-container">
       <!-- displaying final scores and msg -->
+    </div>
+    <div id="timer-container">
+      00:00
+    </div>
+    <div id="btn-container">
+      <button class="start-btn hide" id="start">START</button>
+      <button class="reset-btn hide" id="reset" disabled>RESET</button>
     </div>
   </main>
 </body>
