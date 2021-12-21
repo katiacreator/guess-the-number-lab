@@ -41,7 +41,7 @@ body {
   box-shadow: 0 0 18px var(--accent-primary);
   background-color: var(--primary);
   /* border: solid lime 2px; */
-  /* padding: 30px 10px; */
+  padding: 30px 10px;
 }
 
 /* header:title and instructions */
@@ -76,7 +76,7 @@ body {
 /* only for start and reset btns */
 #btn-container{
   /* border: purple solid 2px; */
-  padding-bottom: 10px;;
+  padding-bottom: 15px;;
 }
 
 
@@ -100,7 +100,7 @@ button{
 }
 
 button:hover{
-  background-color: var(--accent-tertiary);
+  background-color: var(--accent-primary);
 }
 
 .hide{
@@ -118,6 +118,7 @@ button:hover{
   max-width: 600px;
   padding: 10px 0;
   margin: 15px 10px;
+  display: none;/* just for development*/
 }
 
 .square{
@@ -139,8 +140,50 @@ button:hover{
   transform-duration: 2s ;
 }
 
+#guess-container{
+  border: none;
+  /* border-radius: 25px; */
+  /* box-shadow: 0 0 12px var(--secondary); */
+  max-width: 600px;
+  padding: 10px 0;
+  margin: 15px 10px;
+}
+
+#guess-container input{
+  border: none;
+  /* box-shadow: 0 0 18px var(--secondary); */
+  padding: 20px;
+  margin: 15px;
+  /* border: none; */
+  text-align: center;
+  font-family: 'Teko';
+  font-size: 5em;
+  max-width: 4em;
+  background-color: var(--accent-secondary);
+  color: var(--secondary);
+}
+
+#guess-container input::placeholder{
+  color: var(--secondary);
+  /* border: solid red 2px; */
+}
+
+#guess-container button{
+  /* border: solid red 2px; */
+  text-transform: uppercase; 
+  background-color: var(--tertiary);
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 25px;
+  margin: 10px auto; 
+}
+
+#guess-container button:hover{
+  background-color: var(--accent-primary);
+}
+
 /* 
-#guess-container
 #msg-container
 #score-container */
-
